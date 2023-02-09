@@ -4,6 +4,6 @@ fetch('http://127.0.0.1/message/3').then((response) => response.json()).then((da
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message": data})
+        body: JSON.stringify({"message": JSON.stringify(data)})
     }).then(res => res.json()).then(res => console.log(res));
 });
